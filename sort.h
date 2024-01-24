@@ -29,5 +29,8 @@ void quick_sort_recursive(int *array, int low, int high, size_t size);
 int lomuto_partition(int *array, int low, int high, size_t size);
 void shell_sort(int *array, size_t size);
 void shell_sort_with_interval(int *array, size_t size, size_t interval);
+void merge_arrays(int *array, int *temp_array, size_t left, size_t middle, size_t right);
+void merge_sort_recursive(int *array, int *temp_array, size_t left, size_t right);
+void merge_sort(int *array, size_t size);
 
 #endif /* SORT_H */

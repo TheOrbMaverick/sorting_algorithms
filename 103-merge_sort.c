@@ -11,11 +11,12 @@
 
 void merge_sort(int *array, size_t size)
 {
+	/* Allocate temporary space for merging */
+        int *temp_array = malloc(sizeof(int) * size);
+
+
 	if (array == NULL || size < 2)
 		return;
-
-	/* Allocate temporary space for merging */
-	int *temp_array = malloc(sizeof(int) * size);
 
 	if (temp_array == NULL)
 		return;
@@ -48,6 +49,9 @@ void merge_sort_recursive(int *array, int *temp_array, size_t left, size_t right
 
 		/* Merge the two halves */
 		merge_arrays(array, temp_array, left, middle, right);
+
+		/* Print the array */
+		print_array(array, right - left + 1);
 	}
 }
 
